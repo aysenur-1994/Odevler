@@ -1,0 +1,153 @@
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  min-width: 100%;
+  list-style: none;
+}
+.todo {
+  display: flex;
+  margin: 0.5rem;
+  background: white;
+  font-size: 1.5rem;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 1s ease;
+  padding: 10px;
+}
+
+.todo i {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  font-size: 18px;
+  transition: 0.2s;
+  list-style-type: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+ul .todo:nth-child(even) {
+  background: #eee;
+}
+
+ul .todo:hover {
+  background: #ddd;
+}
+
+ul .todo.checked {
+  background: #276678;
+  color: #fff;
+  text-decoration: line-through;
+}
+
+ul li.checked::before {
+  content: "";
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+}
+
+.close:hover {
+  background-color: #f78501;
+  color: white;
+}
+
+.header {
+  background-color: #f78501;
+  padding: 30px 40px;
+  color: white;
+  text-align: center;
+}
+
+img {
+  background-color: white;
+}
+
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+input {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 75%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+}
+
+.button {
+  padding: 10px;
+  width: 25%;
+  background: #d9d9d9;
+  color: #555;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+}
+
+.button:hover {
+  background-color: #bbb;
+}
+.todoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.todoContainer li {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.successDivHide {
+  display: none;
+}
+.errorDivHide {
+  display: none;
+}
+.errorDivShow {
+  display: block;
+  box-shadow: 0px 10px 19px 0px rgba(0, 0, 0, 0.75);
+  position: absolute;
+  background: #fff;
+}
+.successDivShow {
+  display: block;
+  box-shadow: 0px 10px 19px 0px rgba(0, 0, 0, 0.75);
+  position: absolute;
+  background: #fff;
+}
